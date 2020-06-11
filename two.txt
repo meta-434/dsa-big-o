@@ -7,5 +7,5 @@ function isEven(value) {
     }
 }
 
-O(1) linear time? two constant time actions, mod division, and comparison. regardless of size of input.
+O(1) constant time? two constant time actions, mod division, and comparison. regardless of size of input.
 
