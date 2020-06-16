@@ -51,7 +51,7 @@
         }
     }
 
-// O(n^2), because 1 nested array iteration inside another array iteration.
+// 6) O(n^2), because 1 nested array iteration inside another array iteration.
 
     function compute(num) {
         let result = [];
@@ -70,3 +70,27 @@
 
 // 7) despite appearances this is O(n). none of the comparisons, arithmetic, or access-es (array[x]) are more than O(1)
 //      as such, the greatest contributor to time-complexity here is the iteration over num in the for loop.
+
+    function efficientSearch(array, item) {
+        let minIndex = 0;
+        let maxIndex = array.length - 1;
+        let currentIndex;
+        let currentElement;
+
+        while (minIndex <= maxIndex) {
+            currentIndex = Math.floor((minIndex + maxIndex) / 2);
+            currentElement = array[currentIndex];
+
+            if (currentElement < item) {
+                minIndex = currentIndex + 1;
+            } else if (currentElement > item) {
+                maxIndex = currentIndex - 1;
+            } else {
+                return currentIndex;
+            }
+        }
+        return -1;
+    }
+
+// 8) O(Log(n)) - because on every iteration in the while() loop, the data set is divided by 2- on success,
+//             the loop ends, and on failure, the loop is divided by two again.
