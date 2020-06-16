@@ -1,2 +1,0 @@
-1) this is O(1) because regardless of the size of the crowd it will only take 1 action to complete.
-2) O(n), linear relationship. more people = proportionally longer time.
