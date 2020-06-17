@@ -1,0 +1,20 @@
+function doubleArrayValues(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] *= 2;
+    }
+    return array;
+}
+
+O(n), because access is O(1) and non-end-of-array insert is O(n).
+
+O(n)
+
+O(n^2)
+
+O(n)
+
+O(n)
+
+O(1)
+
+O(n)
